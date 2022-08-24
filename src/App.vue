@@ -1,6 +1,18 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
+
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+
+onMounted(() => {
+  console.log('MODE', import.meta.env.MODE);
+  console.log('BASE_URL', import.meta.env.BASE_URL);
+  console.log('PROD', import.meta.env.PROD);
+  console.log('DEV', import.meta.env.DEV);
+  console.log('VITE_BASE_MODE', import.meta.env.VITE_BASE_MODE);
+
+})
+
 </script>
 
 <template>
